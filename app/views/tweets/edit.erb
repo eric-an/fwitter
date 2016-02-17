@@ -1,0 +1,9 @@
+<div class="container-fluid tweet">
+  <h1>Edit Your Tweet</h1>
+
+  <form method="POST" action="/tweets/<%= @tweet.id %>/edit">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <textarea type="text" name="content" rows="5" cols="50"><%= @tweet.content %></textarea><br>
+  <input type="submit" value="submit">
+  </form>
+</div>

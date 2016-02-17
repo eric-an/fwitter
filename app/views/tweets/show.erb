@@ -1,0 +1,13 @@
+<div class="container-fluid tweet-edit">
+  <h1>View Tweet</h1>
+
+  <h4><%= @tweet.content %></h4>
+
+  <h6><a href="/tweets/<%= @tweet.id %>/edit">Edit Tweet</a></h6>
+
+  <form method="POST" action="/tweets/<%= @tweet.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+
+  <input type="submit" value="Delete Tweet">
+  </form>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Fwitter</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
+
+</head>
+
+<body >
+  <nav>
+    <a button type="button" class="navbtn btn btn-default" href="/tweets">View All Tweets</a>
+<a button type="button" class="navbtn btn btn-default" href="/tweets/new">Create a New Tweet</a>
+    <% if logged_in? %>
+    <a button type="button" class="navbtn btn btn-default" href="/users/<%= current_user.slug %>">User Info.</a>
+    <a button type="button" class="navbtn btn btn-default" href="/logout">Logout</a>
+    <% else %>
+      <a button type="button" class="navbtn btn btn-default" href="/login">Login</a>
+      <a button type="button" class="navbtn btn btn-default" href="/signup">Signup</a>
+    <% end %>
+  </nav>
+
+<%= yield %>
+
+  <!-- jQuery Script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Bootstrap core JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>

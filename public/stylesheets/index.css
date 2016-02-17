@@ -1,0 +1,94 @@
+body {
+  position: relative;
+  font-size: 100%;
+  background: rgba(247,220,111,1);
+  background: -moz-linear-gradient(left, rgba(247,220,111,1) 0%, rgba(247,220,111,1) 19%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(247,220,111,1)), color-stop(19%, rgba(247,220,111,1)), color-stop(89%, rgba(255,146,10,1)), color-stop(100%, rgba(255,146,10,1)));
+  background: -webkit-linear-gradient(left, rgba(247,220,111,1) 0%, rgba(247,220,111,1) 19%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+  background: -o-linear-gradient(left, rgba(247,220,111,1) 0%, rgba(247,220,111,1) 19%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+  background: -ms-linear-gradient(left, rgba(247,220,111,1) 0%, rgba(247,220,111,1) 19%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+  background: linear-gradient(to right, rgba(247,220,111,1) 0%, rgba(247,220,111,1) 19%, rgba(255,146,10,1) 89%, rgba(255,146,10,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7dc6f', endColorstr='#ff920a', GradientType=1 );
+  background-size: cover;
+  max-width: 100%;
+  opacity: .9; 
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: 1.7em;
+  margin-top: .27em;
+}
+
+.navbtn {
+  border: none;
+  background: none;
+}
+
+.banner {
+  text-align: center;
+  color: #fff;
+}
+
+.banner h2 {
+  margin-top: 4em;
+  margin-bottom: 2.5em;
+}
+
+#loginbtn, #signupbtn {
+  border-radius: 5px;
+  background: transparent;
+  font-size: 16px;
+  padding: 9px 16px 9px 16px;
+  color: #fff;
+  margin: .7em;
+  border: 1; 
+}
+
+.login h1 {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+
+.login form {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.signup h1 {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+
+.signup form {
+  margin-left: 41%;
+  font-size: 1.5em;
+}
+
+.tweet h1 {
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.tweet form {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+
+.tweet-edit {
+  text-align: center;
+}
+
+.tweet-edit h1, h4, h6 {
+  margin-top: 1.5em;
+}
+
+

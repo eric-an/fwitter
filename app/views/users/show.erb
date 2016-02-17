@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <h2>Hi, <%= @user.username %></h2>
+  <br>
+  <h4>Your tweets:</h4>
+  <% @user.tweets.each do |tweet| %>
+    <br>
+    <h5>Tweet: <%= tweet.content %></h5>
+    <p><a href="/tweets/<%= tweet.id %>">Show Details</a></p>
+  <% end %>
+</div>

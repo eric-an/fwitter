@@ -2,7 +2,7 @@
 
 This application is created as a learning tool to gain a deeper understanding of the Sinatra framework while utilizing the MVC architecture, as well as creating RESTful routes using CRUD actions.
 
-This twitter clone app will create users and associate tweets with the user. 
+Based on a popular social media platform, this app associates users with tweets.
 
 ## License
 

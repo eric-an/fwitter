@@ -1,0 +1,20 @@
+<% unless locals.empty? %>
+  <%= message %>
+<% end %>
+<div class="container-fluid signup">
+  <h1>Create your account here:</h1>
+
+  <form method="POST" action:"/signup">
+
+  <label>Username:</label><br>
+  <input id="username" type="text" name="username"><br>
+  <br>
+  <label>Email:</label><br>
+  <input id="email" type="email" name="email"><br>
+  <br>
+  <label>Password:</label><br>
+  <input id="password" type="password" name="password"><br>
+  <br>
+  <input type="submit" value="Create User">
+  </form>
+</div>
