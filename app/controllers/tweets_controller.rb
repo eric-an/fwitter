@@ -20,8 +20,7 @@ class TweetsController < ApplicationController
 
   post '/tweets/new' do
     @user = current_user
-    @tweet = Tweet.create(content: params[:content])
-    @tweet.user = @user
+    @tweet = Tweet.create(content: params[:content], user: @user)
     if @tweet.save
       redirect to "/users/#{@user.slug}"
     else
@@ -50,7 +49,8 @@ class TweetsController < ApplicationController
 
   patch '/tweets/:id/edit' do
     @tweet = Tweet.find_by(id: params[:id])
-    if @tweet.update(content: params[:content])
+    @user = current_user
+    if @tweet.update(content: params[:content], user: @user)
       redirect to "/tweets/#{@tweet.id}"
     else
       redirect to "/tweets/#{@tweet.id}/edit"
@@ -58,12 +58,11 @@ class TweetsController < ApplicationController
   end
 
   delete '/tweets/:id/delete' do
-    @tweet = Tweet.find_by(id: params[:id])
-    if logged_in? && @tweet.user == current_user
-      @tweet.destroy
-      redirect to '/tweets'
+    @tweet = current_user.tweets.find_by(:id => params[:id])
+    if @tweet && @tweet.destroy
+      redirect "/tweets"
     else
-      redirect to '/tweets'
+      redirect "/tweets/#{@tweet.id}"
     end
   end
 end
